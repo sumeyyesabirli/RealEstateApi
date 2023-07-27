@@ -13,6 +13,9 @@ builder.Services.AddSingleton<IDbSettings>(x => x.GetRequiredService<IOptions<Db
 builder.Services.AddSingleton<IMongoClient>(m => new MongoClient(builder.Configuration.GetValue<string>("DbSettings:ConnectionString")));
 
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<ITestimonialService, TestimonialService>();
 
 
 builder.Services.AddControllers();

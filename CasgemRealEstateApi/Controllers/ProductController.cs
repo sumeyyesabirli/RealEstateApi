@@ -26,12 +26,33 @@ namespace CasgemRealEstateApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(string id)
         {
-            var property = _productService.GetById(id);
-            if (property == null)
+            var product = _productService.GetById(id);
+            if (product == null)
             {
                 return NotFound();
             }
-            return Ok(property);
+            return Ok(product);
+        }
+
+        [HttpGet]
+        public IActionResult GetList()
+        {
+            var properties = _productService.GetList();
+            return Ok(properties);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(string id, [FromBody] Product product)
+        {
+            _productService.Update(id, product);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(string id)
+        {
+            _productService.Delete(id);
+            return NoContent();
         }
 
     }

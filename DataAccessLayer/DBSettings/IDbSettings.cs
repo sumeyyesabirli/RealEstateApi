@@ -8,7 +8,7 @@ namespace DataAccessLayer.DBSettings
 {
     public interface IDbSettings
     {
-        public string AbautCollectionName { get; set; }
+        public string AboutCollectionName { get; set; }
         public string ContactCollectionName { get; set; }
         public string ProductCollectionName { get; set; }
         public string TestimonialCollectionName { get; set; }

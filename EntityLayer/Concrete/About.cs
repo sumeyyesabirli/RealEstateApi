@@ -1,5 +1,5 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-
-    public class Abaut
+    [BsonIgnoreExtraElements]
+    public class About
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string AbautId { get; set; }
+        public string AboutId { get; set; } = string.Empty;
         [BsonElement("ImageUrl")]
         public string ImageUrl { get; set; }
         [BsonElement("Description")]

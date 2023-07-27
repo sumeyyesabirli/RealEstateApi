@@ -13,7 +13,7 @@ namespace EntityLayer.Concrete
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string ?ProductId { get; set; }
+        public string ProductId { get; set; } = string.Empty;
         [BsonElement("BuiltYear")]
         public int BuiltYear { get; set; }
         [BsonElement("Description")]

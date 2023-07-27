@@ -8,7 +8,7 @@ namespace DataAccessLayer.DBSettings
 {
     public class DbSettings : IDbSettings
     {
-        public string AbautCollectionName { get; set; } = string.Empty;
+        public string AboutCollectionName { get; set; } = string.Empty;
         public string ContactCollectionName { get; set; } = string.Empty;
         public string ProductCollectionName { get; set; } = string.Empty;
         public string TestimonialCollectionName { get; set; } = string.Empty;

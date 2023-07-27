@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
+    [BsonIgnoreExtraElements]
     public class Testimonial 
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string TestimonialId { get; set; }
+        public string TestimonialId { get; set; } = string.Empty;
         [BsonElement("CustomerName")]
         public string CustomerName { get; set; }
         [BsonElement("CustomerTitle")]

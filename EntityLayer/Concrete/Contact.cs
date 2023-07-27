@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Contactty
+    [BsonIgnoreExtraElements]
+    public class Contact
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string ContactId { get; set; }
+        public string ContactId { get; set; } = string.Empty;
         [BsonElement("Address")]
         public string Address { get; set; }
         [BsonElement("Email")]
