@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/glassmorphism-login/dist/style.css" />
 
 </head>
-<body>
+
     <!-- partial:index.partial.html -->
     <body>
         <section class="container">
@@ -25,15 +25,15 @@
                     <form method="post">
                         <input type="hidden" asp-for="Id" />
                         <label>Email</label>
-                        <input type="text" class="form-control" asp-for="Email" />
+                        <input type="text" class="form-control" asp-for="UserName" />
                         <br />
                         <label>Şifre</label>
-                        <input type="text" class="form-control" asp-for="Password" />
+                        <input type="password" class="form-control" asp-for="Password" />
                         <br />
+                        <button type="submit">Giriş Yap </button>
+                        
                     </form>
-                    <div class="register-forget opacity">
-                        <a href="/Default/Index/">Giriş Yap </a>
-
+                <div class="register-forget opacity"> 
                     <div class="register-forget opacity">
                         <a href="/Register/Index/"> Üye Ol </a>
                     </div>
@@ -46,5 +46,5 @@
     <!-- partial -->
     <script src="glassmorphism-login/dist/script.js"></script> 
 
-</body>
+
 </html>

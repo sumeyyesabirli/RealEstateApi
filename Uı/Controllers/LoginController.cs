@@ -28,7 +28,7 @@ namespace Uı.Controllers
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<UserResultViewModel>>(jsonData);
-                var result = values.FirstOrDefault(x => x.Email == resultUserDTO.Email && x.Password == resultUserDTO.Password);
+                var result = values.FirstOrDefault(x => x.UserName == resultUserDTO.UserName && x.Password == resultUserDTO.Password);
                 if (result != null)
                 {
                     var user = result.UserName;
