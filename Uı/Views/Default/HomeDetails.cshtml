@@ -65,15 +65,18 @@
                                     </div>
                                 </div>
                             }
-
                         </div>
+                    </div>                    
+                        <div class="col-lg-12 col-md-12 col-sm-12 mt-lg-0 mt-5">
+                        <aside class="sidebar">
+                            <div class="single-bg-white">
+                                <h3 class="post-content-title mb-4">İlan Açıklaması</h3>                               
+                                    <tr>                                        
+                                        <td>@Model.Description</td>
+                                    </tr>                               
+                            </div>
+                        </aside>
                     </div>
-
-                    <div class="single-post-content">
-                        <h3 class="post-content-title mb-3 text-center">İlan Açıklaması</h3>
-                        <textarea class="mb-4">@Model.Description</textarea>
-                    </div>
-
                 </div>
             </div>
             <div class="sidebar-side col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-5">
@@ -114,13 +117,8 @@
                                 <th>Banyo Sayısı:</th>
                                 <td>@Model.BathroomCount</td>
                             </tr>
-
-
                         </table>
                     </div>
-                    <br />
-                    <img style="margin-top:40px" src="~/starter/assets/images/photo.jpeg" width="370" />
-
                 </aside>
             </div>
         </div>
